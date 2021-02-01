@@ -112,10 +112,12 @@ main {
 #repositoriosUsuario {
     display: flex;
     flex-wrap: wrap;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .buttons {
-    width: 200px;
+    width: 180px;
     height: 60px;
     align-items: center;
     background-color: #4F4F4F;
