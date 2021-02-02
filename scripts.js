@@ -1,6 +1,5 @@
 class Model {
     constructor(){
-        this._img = "";
         this._nome = "";
         this._login = "";
         this._repositorio = "";
@@ -33,13 +32,9 @@ class Model {
     }
 
     atualiza(info) {
-        this._img = info.img;
         this._nome = info.name ;
         this._login = info.login;
     }
-        getImg(){
-            return this._img;
-        }
         getNome(){
             return this._nome;
         }
@@ -60,9 +55,6 @@ function erro (numErro) {
 
 class Viewer {
     MostrarUsuario(info) {
-        this._img = document.createElement("img");
-        this._img.src = info.img;
-
         let nome = document.querySelector("#nome")
         nome.innerText = info.getNome()
 
@@ -131,11 +123,7 @@ botao.addEventListener('click' , function () {
         <img id="imgPerfil" src="./images/GITHUB.png" alt="">
             <p id="nome">Nome</p>
             <p id="username">Usuario</p><br>
-            <div id="socialMedia">
-            <a href="https://www.facebook.com/gaby.dossantospereira/"><img class="midia" src="./images/facebook.png" alt=""></a>
-            <a href="https://github.com/gspgaby"><img class="midia" src="./images/GITHUB.png" alt=""></a>
-            <a href="https://www.linkedin.com/in/gabriella-dos-santos-pereira-762a7819a/"><img class="midia" src="./images/linkedin.jpg" alt=""></a>
-            </div>
+            
         </div>
         <div id="repositorio">
             <header>
@@ -146,6 +134,14 @@ botao.addEventListener('click' , function () {
         </div>
     </div>
 </main>
+
+<footer id-"footer">
+<div id="socialMedia">
+            <a href="https://www.facebook.com/gaby.dossantospereira/"><img class="midia" src="./images/facebook.png" alt=""></a>
+            <a href="https://github.com/gspgaby"><img class="midia" src="./images/GITHUB.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/gabriella-dos-santos-pereira-762a7819a/"><img class="midia" src="./images/linkedin.jpg" alt=""></a>
+            </div>
+</footer>
 </section>`
     controller.ProcurarUsuario(nomeDeUsuario);
     controller.ProcurarRepositorio(nomeDeUsuario);

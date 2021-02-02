@@ -91,14 +91,6 @@ main {
     color: #1c1c1c;
 }
 
-.socialmidia {
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-.midia {
-    height: 18px;
-}
 
 #repositorio {
     width: 750px;
@@ -112,10 +104,12 @@ main {
 #repositoriosUsuario {
     display: flex;
     flex-wrap: wrap;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .buttons {
-    width: 200px;
+    width: 180px;
     height: 60px;
     align-items: center;
     background-color: #4F4F4F;
@@ -132,4 +126,18 @@ main {
 }
 .link:hover {
     color: #ffffff;
+}
+
+#footer{
+    width: 20px;
+    background-color: #4F4F4F
+}
+
+.socialmidia {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.midia {
+    height: 18px;
 }
