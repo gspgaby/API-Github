@@ -91,14 +91,6 @@ main {
     color: #1c1c1c;
 }
 
-.socialmidia {
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-.midia {
-    height: 18px;
-}
 
 #repositorio {
     width: 750px;
@@ -134,4 +126,18 @@ main {
 }
 .link:hover {
     color: #ffffff;
+}
+
+#footer{
+    width: 20px;
+    background-color: #4F4F4F
+}
+
+.socialmidia {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.midia {
+    height: 18px;
 }
