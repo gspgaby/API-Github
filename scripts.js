@@ -1,5 +1,6 @@
 class Model {
     constructor(){
+        this._img = "";
         this._nome = "";
         this._login = "";
         this._repositorio = "";
@@ -32,9 +33,13 @@ class Model {
     }
 
     atualiza(info) {
-        this._nome = info.name ;
+        this._img = info.avatar_url;
+        this._nome = info.name;
         this._login = info.login;
     }
+        getImg(){
+            return this._img;
+        }
         getNome(){
             return this._nome;
         }
@@ -55,6 +60,9 @@ function erro (numErro) {
 
 class Viewer {
     MostrarUsuario(info) {
+        let img = document.querySelector("#imgPerfil")
+        img.src=info.getImg()
+        
         let nome = document.querySelector("#nome")
         nome.innerText = info.getNome()
 
@@ -120,7 +128,7 @@ botao.addEventListener('click' , function () {
         <h2 class="titulo">
             Perfil do Usuário
         </h2>
-        <img id="imgPerfil" src="./images/GITHUB.png" alt="">
+        <img id="imgPerfil" src="" alt="">
             <p id="nome">Nome</p>
             <p id="username">Usuario</p><br>
             
